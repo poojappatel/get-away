@@ -1,0 +1,31 @@
+{
+  "name": "get-away",
+  "version": "1.0.0",
+  "description": "Manages dependencies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "amadeus": "^8.0.0",
+    "ejs": "3.1.9",
+    "express": "^4.18.2",
+    "mime": "3.0.0",
+    "mysql2": "3.2.0",
+    "node-fetch": "^2.6.11",
+    "nodemon": "^2.0.22",
+    "package.json": "^0.0.0",
+    "sequelize": "^6.31.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ly-william/get-away.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ly-william/get-away/issues"
+  },
+  "homepage": "https://github.com/ly-william/get-away#readme"
+}

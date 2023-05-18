@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Rides</title>
+	  <link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./listings.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body id="cars_listing">
+    <main>
+    <div>
+      <a class="back-button" onclick="backUpdate()" href="./cars_result.html">← Back</a>
+      <h1 class = "logo">Logo</h1>
+    </div>
+        <form id = "start-form">
+            <div class ="input-line">
+				      <label> 
+					      <span>Destination</span>
+					      <input name="destination" id="destination" type="text" disabled></input>
+				      </label>
+              <label> 
+					      <span>Pick-up</span>
+					      <input name="pickup" id="pick-up-date" type="date"></input>
+				      </label>
+              <label> 
+                <span>Time</span>
+                <input name="pickupTime" id="pick-up-time" type="time"></input> 
+              </label>
+              <label> 
+                <span>Drop-off</span>
+                <input name="dropoff" id="drop-off-date" type="date"></input>
+              </label>
+              <label> 
+                <span>Time</span>
+                <input name="dropoffTime" id="drop-off-time" type="time" ></input>
+              </label>
+            </div>
+            <div class="input-line">
+              <label> 
+                <span>$</span>
+                <input name="remaining-budget" id="budget" type="text" disabled></input>
+                <span>Remaining Budget</span>
+              </label>
+              <label>
+                <input name="people" id="person-count" type="number" disabled></input>
+                <span>Person(s)</span>
+              </label>
+            </div>
+        </form>
+        <div class = "content">
+          <form id = "filters">
+            <fieldset name="price">
+              <legend>Total Price</legend>
+              <label>
+                $<input type="number" name="price" class="range-min" value=0></input>
+                to
+              </label>
+              <label>
+                $<input type="number" name="price" class="range-max"></input>
+              </label>
+            </fieldset>
+            <fieldset name="seats">
+              <legend>Number of Seats</legend>
+              <label>
+                <input type="radio" name="seats" id="one" value=1></input>
+                1
+              </label>
+              <label>
+                <input type="radio" name="seats" id="two" value=2></input>
+                2+
+              </label>
+              <label>
+                <input type="radio" name="seats" id="four" value=4 checked></input>
+                4+
+              </label>
+              <label>
+                <input type="radio" name="seats" id="six" value=6></input>
+                6+
+              </label>
+            </fieldset>
+            <fieldset name="vehicle">
+              <legend>Type of Transportation</legend>
+              <label>
+                <input type="checkbox" name="vehicle" id="uber" value=0 checked></input>
+                Uber
+              </label>
+              <label>
+                <input type="checkbox" name="vehicle" id="lyft" value=0 checked></input>
+                Lyft
+              </label>
+              <label>
+                <input type="checkbox" name="vehicle" id="rental" value=0></input>
+                Rental Cars
+              </label><br>
+              <button type="button" id="find-rides-button" class="submit-button">Search!</button>
+            </fieldset>
+          </form>
+          <ul id = "listings">
+            Click "Search" to search for rides!
+          </ul>
+        </div>
+    </main>
+    <script src="main.js"></script>    
+    <script src ="cars.js"></script>
+  </body>

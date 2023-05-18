@@ -1,0 +1,13 @@
+h1 {
+	font-family: 'Judson', Times;
+	font-weight: bold;
+	font-size: 60px;
+	color: #C86D18;
+	margin: 1em;
+}
+
+h1.logo
+{
+	width : 500px;
+	height: 189px;
+}

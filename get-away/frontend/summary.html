@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Itinerary</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./summary.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body id="summary">
+    <main>
+		<div>
+			<a class="back-button" href="./cards.html">← Back</a>
+			<h1 class = "logo">Logo</h1>
+		</div>
+		<form id="start-form">
+			<div class="input-line">
+				<label> 
+					<span>From</span>
+					<input name="origin" id="start-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>To</span>
+					<input name="destination" id="end-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>Depart</span>
+					<input name="depart" type="date" disabled></input>
+				</label>
+				<label>
+					<span>One Way</span>
+					<input name="one-way" type="checkbox" disabled></input>
+				</label>
+				<label> 
+					<span>Return</span>
+					<input name="return" type="date" disabled></input>
+				</label>
+			</div>
+			<div class="input-line">
+				<label> 
+					<span>$</span>
+					<input name="remaining-budget" type="number" disabled></input>
+				</label>
+				<label>
+					<input name="people" type="number" disabled></input>
+					<span>Person(s)</span>
+				</label>
+			</div>
+		</form>
+		<h1>Your Itinerary</h1>
+		<ul id="summary">
+			<li id="transportation-summary">
+				<h2>Transportation</h2>
+			</li>
+			<li id="lodging-summary">
+				<h2>Lodging</h2>
+			</li>
+			<li id="poi-summary">
+				<h2>Activities</h2>
+			</li>
+			<li id="cars-summary">
+				<h2>Uber, Lyft and Rental Car Rides</h2>
+			</li>
+		</ul>
+		<div id="grand-total"></div>
+		<div id="remaining-budget"></div>
+		<button class="submit-button" onclick="share(this)">Click to get a shareable link!</button>
+    </main>
+	<script src="main.js"></script>
+	<script src="summary.js"></script>
+  </body>
+</html>

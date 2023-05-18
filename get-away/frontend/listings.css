@@ -1,0 +1,124 @@
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.content {
+	display: flex;
+	flex-flow: row-reverse wrap;
+	align-items: flex-start;
+	padding-bottom: 30px;
+}
+
+.content > *:not(:first-child) {
+	margin-right: 30px;
+	flex-grow: 1;
+}
+
+#listings, #filters {
+	border-radius: 8px;
+	border: 1px solid var(--line-color);
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	background-color: white;
+}
+
+.listing-container:not(:last-child) .listing, #filters > *:not(:last-child) {
+	border-bottom: 1px solid var(--line-color); 
+}
+
+.listing-container {
+	padding: 0 15px;
+}
+
+.listing-container:hover {
+	background-color: #F0F0F0;
+	cursor: pointer;
+}
+
+.listing-container:active {
+	background-color: #E0E0E0;
+}
+
+.listing-container:first-child {
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.listing-container:last-child {
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.listing {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	padding: 30px 15px;
+}
+
+.listing > * {
+	text-align: left;
+}
+
+.listing > :nth-child(n+4) {
+	text-align: right;
+}
+
+#filters {
+	padding: 0 10px;
+}
+
+#filters input[type=number] {
+	max-width: 10ch;
+}
+
+fieldset {
+	border-width: 0;
+	padding: 0.5em 0;
+	float: top;
+}
+
+fieldset > legend {
+	float: left;
+	margin-top: 0.5em;
+}
+
+fieldset > label{
+	display: block;
+	text-align: left;
+}
+
+fieldset > label:first-of-type {
+	margin-top: 2em;
+}
+
+fieldset > label > input {
+	border: 1px solid var(--line-color);
+	border-radius: 4px;
+	margin: 2px;
+	padding: 0 2px;
+}
+
+.small-pic {
+	width: 150px;
+	height: 90px;
+}
+
+.poi-name {
+	color: green;
+}
+
+.details-pack {
+  	flex: 1;
+  	margin-right: 20px;
+}
+
+.rank-pack {
+	flex: 1;
+}
+
+.wrap {
+	width: 10px;
+	overflow-wrap: break-word;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Activities/Restaurants</title>
+	  <link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./listings.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body id="poi_restaurants">
+    <main>
+		<div>
+			<a class="back-button" onclick="backUpdate()" href="./poi_results.html">← Back</a>
+			<h1 class = "logo">Logo</h1>
+    </div>
+    <div>
+      <form id = "start-form">
+        <div class = "input-line">
+          <label> 
+            <span>Destination</span>
+            <input name="destination" id="destination" type="text" disabled></input>
+          </label>
+          <label>
+            <span>$</span>
+            <input name="remaining-budget" id="budget" type="text" disabled></input>
+            <span>Remaining&nbsp;Budget</span>
+          </label>
+          <label>
+            <input name="people" id="adult-count" type="number" disabled></input>
+            <span>Person(s)</span>
+          </label>
+        </div>
+      </form>
+      <div class = "content">
+        <form id = "filters">
+          <fieldset name="radius">
+            <legend>Radius</legend>
+            <label>
+              <input type="number" name="radius" class="number" value=5></input> miles
+                      <label>
+          </fieldset>
+          <fieldset name="price">
+            <legend>Total Price</legend>
+            <label>
+              $<input type="number" name="price" class="range-min" value=0></input>
+              to
+            </label>
+            <label>
+              $<input type="number" name="price" class="range-max"></input>
+            </label>
+          </fieldset>
+          <fieldset name="rating">
+            <legend>Restaurant Rating</legend>
+            <label>
+              <input type="radio" name="rating" value=5></input>
+              5
+            </label>
+            <label>
+              <input type="radio" name="rating" value=4></input>
+              4+
+            </label>
+            <label>
+              <input type="radio" name="rating" value=3></input>
+              3+
+            </label>
+            <label>
+              <input type="radio" name="rating" value=2></input>
+              2+
+            </label>
+            <label>
+              <input type="radio" name="rating" value=1></input>
+              1+
+            </label>
+            <label>
+              <input type="radio" name="rating" value=0 checked></input>
+              0+
+            </label><br>
+            <button type = "button" id= "poi_search_button" class="submit-button">Search!</button>
+          </fieldset>
+          <!-- <fieldset name="tag">
+            <legend>Tags (To Do)</legend>
+          </fieldset> -->
+        </form>
+        <ul id = "listings">
+          Click "Search" to search for points of interest!
+        </ul>
+      </div>
+    </div>
+    </main>
+    <script src = "main.js"></script>
+    <script src = "poi_restaurants.js"></script>
+  </body>
