@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Itinerary</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./cards.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body id="cards">
+    <main>
+		<div>
+			<a class="back-button" href="./">← Back</a>
+			<h1 class = "logo">Logo</h1>
+		</div>
+		<form id="start-form">
+			<div class="input-line">
+				<label> 
+					<span>From</span>
+					<input name="origin" id="start-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>To</span>
+					<input name="destination" id="end-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>Depart</span>
+					<input name="depart" type="date" disabled></input>
+				</label>
+				<label>
+					<span>One Way</span>
+					<input name="one-way" type="checkbox" disabled></input>
+				</label>
+				<label> 
+					<span>Return</span>
+					<input name="return" type="date" disabled></input>
+				</label>
+			</div>
+			<div class="input-line">
+				<label> 
+					<span>$</span>
+					<input name="remaining-budget" type="number" disabled></input>
+				</label>
+				<label>
+					<input name="people" type="number" disabled></input>
+					<span>Person(s)</span>
+				</label>
+			</div>
+		</form>
+		<h1>Configure your Getaway</h1>
+		<div id="cards">
+			<div class="card" id="transportation-card">
+				<h2 class="card-title">Transportation</h2>
+				<div class="card-details">
+				</div>
+				<button class="submit-button" onclick="chooseTransportation()">Search for Transport</button>
+			</div>
+			<div class = card id="lodging-card">
+				<h2 class = "card-title">Lodging</h2>
+				<div class = "card-details">
+				</div>
+				<button class = "submit-button" onclick="chooseLodging()">Search for Lodging</button>
+			</div>
+			<div class = card id = "poi-card">
+				<h2 class = "card-title">Activities</h2>
+				<div class = "card-details">
+				</div>
+				<button class = "submit-button" onclick="chooseActivity()">Search for Activities</button>
+			</div>
+			<div class = card id = "cars-card">
+				<h2 class = "card-title">Rides</h2>
+				<div class = "card-details">
+				</div>
+				<button class = "submit-button" onclick="chooseCars()">Search for Rides</button>
+			</div>
+		</div>
+		<div>
+			<a class="back-button summary-button" href="./summary.html">View Itinerary →</a>
+		</div>
+    </main>
+	<script src="main.js"></script>
+	<script src="cards.js"></script>
+  </body>
+</html>

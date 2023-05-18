@@ -1,0 +1,45 @@
+#summary {
+	border-bottom: 1px solid var(--line-color);
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 20px;
+}
+
+li h2 {
+	text-align: left;
+	margin-block-start: 0;
+}
+
+li > div {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+li > div div {
+	padding: 20px;
+}
+
+/* li > div div:first-child {
+	text-align: left;
+}
+
+li > div div:last-child {
+	text-align: right;
+} */
+
+#grand-total, #remaining-budget {
+	text-align: right;
+	padding: 20px 20px 0px 20px;
+}
+
+button.submit-button {
+	margin: 20px;
+	width: 30ch;
+}

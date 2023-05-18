@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getaway</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Judson" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<!-- Will check out manifest details later -->
+	<!-- <link rel="manifest" href="/site.webmanifest"> -->
+  </head>
+  <body id="start">
+    <main>
+		<h1 class = "logo">Logo</h1>
+		<form id="start-form">
+			<div class="input-line">
+				<input name="origin" id="start-place" class="location-input" type="text" placeholder="From where?"></input>
+				<input name="destination" id="end-place" class="location-input" type="text" placeholder="Where to?"></input>
+				<label> 
+					<span>Depart</span>
+					<input name="depart" id="depart-date" type="date"></input>
+				</label>
+				<label>
+					<span>One Way</span>
+					<input name="one-way" id="one-way" type="checkbox"></input>
+				</label>
+				<label> 
+					<span>Return</span>
+					<input name="return" id="return-date" type="date"></input>
+				</label>
+			</div>
+			<div class="input-line">
+				<label> 
+					<span>$</span>
+					<input name="budget" id="budget" type="number" min=1 placeholder="Budget" step=0.01></input>
+				</label>
+				<label>
+					<input name="people" id="adult-count" type="number" value=1 min=1 step=1></input>
+					<span>Person(s)</span>
+				</label>
+			</div>
+		</form>
+		<button id="start-submit" class="submit-button" onclick="submit()">Start</button>
+    </main>
+	<script src="main.js"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
+

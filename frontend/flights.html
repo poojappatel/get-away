@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Flight</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./listings.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body id="transportation">
+    <main>
+		<div>
+			<a class="back-button" href="./cards.html">← Back</a>
+			<h1 class = "logo">Logo</h1>
+		</div>
+		<form id="start-form">
+			<div class="input-line">
+				<label> 
+					<span>From</span>
+					<input name="origin" id="start-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>To</span>
+					<input name="destination" id="end-place" type="text" disabled></input>
+				</label>
+				<label> 
+					<span>Depart</span>
+					<input name="depart" id="depart-date" type="date" disabled></input>
+				</label>
+				<label>
+					<span>One Way</span>
+					<input name="one-way" type="checkbox" disabled></input>
+				</label>
+				<label> 
+					<span>Return</span>
+					<input name="return" id="return-date" type="date" disabled></input>
+				</label>
+			</div>
+			<div class="input-line">
+				<label> 
+					<span>$</span>
+					<input name="remaining-budget" id="budget" type="number" disabled></input>
+					<span>Remaining Budget</span>
+				</label>
+				<label>
+					<input name="people" id="adult-count" type="number" disabled></input>
+					<span>Person(s)</span>
+				</label>
+			</div>
+		</form>
+		<div class="content">
+			<form id="filters">
+				<fieldset name="price">
+					<legend>Price</legend>
+					<label>
+						$<input type="number" name="price" class="range-min" value=0></input>
+						to
+					</label>
+					<label>
+						$<input type="number" name="price" class="range-max"></input>
+					</label>
+				</fieldset>
+				<fieldset name="stops">
+					<legend>Maximum No. Stops</legend>
+					<label>
+						<input type="radio" name="stops" value=0 checked></input>
+						0
+					</label>
+					<label>
+						<input type="radio" name="stops" value=1></input>
+						1
+					</label>
+					<label>
+						<input type="radio" name="stops" value=2></input>
+						2+
+					</label>
+				</fieldset>
+			</form>
+			<ul id="listings">
+				<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gifz" style="padding: 3.5em" alt="Loading listings..." width="50" height="50">
+			</ul>
+		</div>
+    </main>
+	<script src="main.js"></script>
+	<script src="flights.js"></script>
+  </body>
+</html>
